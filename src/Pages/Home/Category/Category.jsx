@@ -1,21 +1,26 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
 
-import img1 from '../../../assets/home/slide1.jpg'
-import img2 from '../../../assets/home/slide2.jpg'
-import img3 from '../../../assets/home/slide3.jpg'
-import img4 from '../../../assets/home/slide4.jpg'
-import img5 from '../../../assets/home/slide5.jpg'
+import img1 from "../../../assets/home/slide1.jpg";
+import img2 from "../../../assets/home/slide2.jpg";
+import img3 from "../../../assets/home/slide3.jpg";
+import img4 from "../../../assets/home/slide4.jpg";
+import img5 from "../../../assets/home/slide5.jpg";
 
 // Css
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import SectionTitle from "../../../Components/Shared/SectionTitle";
 const Category = () => {
-    return (
-        <div>
-            <Swiper
+  return (
+    <div>
+      <SectionTitle
+      heading={"Order Online "}
+      subHeading=  {"From 11.00am to 10.00pm" }
+      />
+      <Swiper
         slidesPerView={3}
         spaceBetween={30}
         freeMode={true}
@@ -23,31 +28,31 @@ const Category = () => {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="mySwiper"
+        className="mySwiper mb-20"
       >
         <SwiperSlide>
-            <img src={img1} alt="" />
-            <h2 className='text-4xl -mt-25 uppercase text-center'>salad</h2>
+          <img className="w-full"  src={img1} alt="" />
+          <h2 className="text-4xl  uppercase text-center -mt-24 text-white ">salad</h2>
         </SwiperSlide>
         <SwiperSlide>
-            <img src={img2} alt="" />
-            <h2>Fizza</h2>
+          <img className="w-full" src={img2} alt="" />
+          <h2 className="text-4xl  uppercase text-center -mt-24 text-white ">Fizza</h2>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={img3} alt="" />
-        <h2>salad</h2>
+          <img className="w-full" src={img3} alt="" />
+          <h2 className="text-4xl  uppercase text-center -mt-24 text-white ">salad</h2>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={img4} alt="" />
-        <h2>Soups</h2>
+          <img className="w-full" src={img4} alt="" />
+          <h2 className="text-4xl  uppercase text-center -mt-24 text-white ">Soups</h2>
         </SwiperSlide>
         <SwiperSlide>
-        <img src={img5} alt="" />
-        <h2>Deserts</h2>
+          <img className="w-full" src={img5} alt="" />
+          <h2 className="text-4xl  uppercase text-center -mt-24 text-white ">Deserts</h2>
         </SwiperSlide>
       </Swiper>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Category;

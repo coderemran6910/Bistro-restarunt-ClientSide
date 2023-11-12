@@ -1,7 +1,21 @@
 
 const Navbar = () => {
+  const menu =<>
+   <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul className="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+  </>
+  
     return (
-        <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white  max-w-screen-xl ">
+        <div className="navbar fixed z-10 bg-opacity-40 bg-black text-white  max-w-screen-xl ">
   <div className="navbar-start ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -19,7 +33,10 @@ const Navbar = () => {
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+   <div className="flex  flex-col justify-center items-center">
+   <a className=" font-extrabold normal-case text-2xl"> BISTRO BOSS </a>
+    <a className="tracking-[.40rem]	 font-bold text-sm uppercase first-letter:text-xl"> Restaurant </a>
+   </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
