@@ -14,11 +14,11 @@ const Recomands = () => {
     }, [])
     
   return (
-    <div >
+    <div className="mb-20">
       <SectionTitle heading={" CHEF RECOMMENDS"} subHeading={"shuld try "} />
 
       {/* CARD  */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div className=" md:flex  justify-evenly  ">
     {
         data.map((item , index)=> {
             return(
